@@ -41,3 +41,7 @@ and then add the npm modules
 As the stackoverflow answer above highlights, it's a good idea to specify npm in your package.json file (under engines)
 
 NOW heroku ps will work
+
+BUT you will get an error if you haven't setup your port correctly in server.js
+http://stackoverflow.com/questions/15693192/heroku-node-js-error-web-process-failed-to-bind-to-port-within-60-seconds-of
+make sure you set it as: .listen(process.env.PORT || 5000)
