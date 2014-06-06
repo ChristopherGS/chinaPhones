@@ -8,3 +8,18 @@ steps for Heroku
 
 - add Ruby to path for foreman otherwise it will give you: 'foreman' is not recognized as an internal or external command, operable program or batch file.
 I reinstalled it, still the same error. Ok, fixed the error, had to add C:\Program Files (x86)\Heroku\ruby-1.9.2\bin to Windows %PATH%
+
+- Then when you attempt to start foreman you will get the ruby errors 'Bad file descriptor'
+
+To resolve this, 
+gem uninstall foreman   
+gem install foreman -v 0.61.0
+
+might take a while
+
+then test it, then quit (CTRL-C)
+
+- Then heroku create
+
+- Then git push heroku master
+http://stackoverflow.com/questions/21519635/git-push-heroku-master-results-in-issues-with-authenticity-and-host-key-failing 
