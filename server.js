@@ -19,6 +19,4 @@ app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 app.use( express.static( path.join( __dirname, 'site') ) );
 
 //Start server
-app.listen(5000, function() {
-  console.log( 'Express server listening on port %d', 5000 );
-});
+app.listen(process.env.PORT || 5000);
