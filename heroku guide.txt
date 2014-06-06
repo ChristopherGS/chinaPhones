@@ -23,3 +23,21 @@ then test it, then quit (CTRL-C)
 
 - Then git push heroku master
 http://stackoverflow.com/questions/21519635/git-push-heroku-master-results-in-issues-with-authenticity-and-host-key-failing 
+
+OPEN GIT BASH
+
+1) You'll need to add ssh keys:  heroku keys:add
+
+2) Then you can do git push heroku master
+
+3) all will look OK BUT IT IS NOT
+
+When you try to do heroku ps it will crash
+http://stackoverflow.com/questions/11459475/should-i-check-in-node-modules-to-git-when-creating-a-node-js-app-on-heroku
+
+Need to remove the .gitignore file
+and then add the npm modules
+
+As the stackoverflow answer above highlights, it's a good idea to specify npm in your package.json file (under engines)
+
+NOW heroku ps will work
